@@ -2,8 +2,8 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-echo "Installing app to /usr/local/bin/forge"
+echo "Installing app to /usr/local/bin/forge-ssh"
 
 touch "$DIR/forge.key"
 
-ln -s "$DIR/app.sh" "/usr/local/bin/forge"
+ln -s "$DIR/app.sh" "/usr/local/bin/forge-ssh"
