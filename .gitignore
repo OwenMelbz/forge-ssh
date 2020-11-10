@@ -1,0 +1,5 @@
+manifest.json
+.idea
+.DS_Store
+node_modules
+forge.key
