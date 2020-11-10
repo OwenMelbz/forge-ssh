@@ -19,11 +19,26 @@ To save bandwidth and speed, we look up from a cached version of the server list
 
 If you do not run `forge-ssh update` you will not see any servers to connect to.
 
+You can see a full list of your cached servers by using `forge-ssh list`.
+
 ## Usage
 
 From terminal just enter `forge-ssh server-name` and you should connect :)
 
 If you use a custom SSH port or custom users etc, you can modify the `app.sh` to your hearts content.
+
+## Bash Completion (DOESN'T YET WORK)
+
+If you would like to use bash completion, you must load the `completion-forge-ssh.bash` with any of your other auto completions.
+How to do this will depend on your computers configuration. As a one off task you can do `source completion-forge-ssh.bash`.
+
+e.g. for macOS it's recommended to install the completion package e.g. `brew install bash-completion` and add the script to your `/usr/local/etc/bash_completion.d` directory as `forge-ssh`
+
+Alternatively you can symlink it to keep it up to date for bug fixes e.g. `ln -s "PATH TO SCRIPT/completion-forge-ssh.bash" "/usr/local/etc/bash_completion.d/forge-ssh"`
+
+You will need to check that your bash completion directory is loaded via your bash_profile e.g. `[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion`
+
+ZSH users might need to add `autoload bashcompinit; bashcompinit` into their .zsh config.
 
 ## Dependencies
 
