@@ -12,13 +12,24 @@ if [ -z "$1" ]
 then
   echo
   echo "Please provide a server name."
+  echo
   exit 1
 fi
 
 if [ $1 = "update" ]; then
   echo
   echo "Updating server manifest."
+  echo
   node $DIR/sync.js
+  exit 0
+fi
+
+if [ $1 = "list" ]; then
+  echo
+  echo "Connected servers:"
+  echo
+  node $DIR/sync.js
+  node $DIR/list-servers.js
   exit 0
 fi
 
@@ -30,9 +41,12 @@ if [ -z "$IP" ]
 then
   echo
   echo "Could not find server name $1."
+  echo
   exit 1
 fi
 
+echo
 echo "Connecting to $1 on $IP."
+echo
 
 ssh forge@$IP

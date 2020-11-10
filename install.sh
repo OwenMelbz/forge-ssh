@@ -6,4 +6,6 @@ echo "Installing app to /usr/local/bin/forge-ssh"
 
 touch "$DIR/forge.key"
 
-ln -s "$DIR/app.sh" "/usr/local/bin/forge-ssh"
+echo '{"servers": []}' > "$DIR/manifest.json"
+
+#ln -s "$DIR/app.sh" "/usr/local/bin/forge-ssh"
