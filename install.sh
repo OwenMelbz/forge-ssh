@@ -10,6 +10,3 @@ echo '{"servers": []}' > "$DIR/manifest.json"
 
 echo "Installing app to /usr/local/bin/forge-ssh"
 ln -s "$DIR/app.sh" "/usr/local/bin/forge-ssh"
-
-#echo "Installing bash completions (don't worry if this fails)"
-#ln -s "$DIR/completion-forge-ssh.bash" "/usr/local/etc/bash_completion.d/forge-ssh"
