@@ -27,7 +27,7 @@ From terminal just enter `forge-ssh server-name` and you should connect :)
 
 If you use a custom SSH port or custom users etc, you can modify the `app.sh` to your hearts content.
 
-## Bash Completion
+## Bash Completion (Sort of)
 
 If you would like to use bash completion, you must load the `completion-forge-ssh.bash` with any of your other auto completions.
 How to do this will depend on your computers configuration. As a one off task you can do `source completion-forge-ssh.bash`.
@@ -36,7 +36,9 @@ e.g. for macOS it's recommended to install the completion package e.g. `brew ins
 
 **Warning:** Due to the nature of the script, unfortunately you cannot symlink it to `/usr/local/etc/bash_completion.d/` as it must reside within the repo directory.
 
-**Warning 2:** ZSH users might need to add `autoload bashcompinit; bashcompinit` into their .zsh config before loading the autocompletion e.g.
+**Warning 2:** If anybody can make this work in vanilla bash, please PR! This seems to only work in advance shells such as ZSH etc.
+
+**Warning 3:** ZSH users might need to add `autoload bashcompinit; bashcompinit` into their .zsh config before loading the autocompletion e.g.
 
 ```sh
 autoload bashcompinit; bashcompinit;
